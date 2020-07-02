@@ -1,0 +1,113 @@
+/* Start global */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, Arial;
+}
+
+/* End global */
+
+.quiz_app {
+    width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #F8F8F8;
+    .quiz_info {
+        display: flex;
+        padding: 20px;
+        background-color: #FFF;
+        margin-bottom: 15px;
+        .category {
+            flex: 1;
+        }
+        .count {
+            flex: 1;
+            text-align: right;
+        }
+    }
+    .question_area {
+        padding: 20px;
+        background-color: #FFF;
+        h2 {
+            margin: 0;
+        }
+    }
+    .answers_area {
+        padding: 20px;
+        background-color: #FFF;
+        .answer {
+            padding: 15px;
+            background-color: #F9F9F9;
+            input[type=radio]:checked + label {
+                color: #0075ff;
+            }
+            label {
+                position: relative;
+                top: -1px;
+                margin-left: 5px;
+                color: #777;
+                font-weight: bold;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            &:not(:last-child) {
+                border-bottom: 1px solid #dfdfdf;
+            }
+        }
+    }
+    .submit_button {
+        display: block;
+        width: 100%;
+        margin: 20px auto;
+        padding: 15px;
+        background-color: #0075ff;
+        color: #FFF;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        &:focus {
+            outline: none;
+        }
+    }
+    .bullets {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #FFF;
+        border-top: 1px solid #dfdfdf;
+        .spans {
+            flex: 1;
+            display: flex;
+            span {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+                border-radius: 50%;
+                background-color: #DDD;
+                cursor: pointer;
+                &.on {
+                    background-color: #0075ff;
+                }
+            }
+        }
+    }
+    .results {
+        span {
+            font-weight: bold;
+            &.bad {
+                color: #dc0a0a;
+            }
+            &.good {
+                color: #009688;
+            }
+            &.perfect {
+                color: #0075ff;
+            }
+        }
+    }
+}

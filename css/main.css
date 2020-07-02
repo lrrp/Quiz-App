@@ -1,0 +1,111 @@
+/* Start global */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma, Arial;
+}
+
+/* End global */
+.quiz_app {
+  width: 800px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #F8F8F8;
+}
+.quiz_app .quiz_info {
+  display: flex;
+  padding: 20px;
+  background-color: #FFF;
+  margin-bottom: 15px;
+}
+.quiz_app .quiz_info .category {
+  flex: 1;
+}
+.quiz_app .quiz_info .count {
+  flex: 1;
+  text-align: right;
+}
+.quiz_app .question_area {
+  padding: 20px;
+  background-color: #FFF;
+}
+.quiz_app .question_area h2 {
+  margin: 0;
+}
+.quiz_app .answers_area {
+  padding: 20px;
+  background-color: #FFF;
+}
+.quiz_app .answers_area .answer {
+  padding: 15px;
+  background-color: #F9F9F9;
+}
+.quiz_app .answers_area .answer input[type=radio]:checked + label {
+  color: #0075ff;
+}
+.quiz_app .answers_area .answer label {
+  position: relative;
+  top: -1px;
+  margin-left: 5px;
+  color: #777;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+.quiz_app .answers_area .answer:not(:last-child) {
+  border-bottom: 1px solid #dfdfdf;
+}
+.quiz_app .submit_button {
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #0075ff;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+}
+.quiz_app .submit_button:focus {
+  outline: none;
+}
+.quiz_app .bullets {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #FFF;
+  border-top: 1px solid #dfdfdf;
+}
+.quiz_app .bullets .spans {
+  flex: 1;
+  display: flex;
+}
+.quiz_app .bullets .spans span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: #DDD;
+  cursor: pointer;
+}
+.quiz_app .bullets .spans span.on {
+  background-color: #0075ff;
+}
+.quiz_app .results span {
+  font-weight: bold;
+}
+.quiz_app .results span.bad {
+  color: #dc0a0a;
+}
+.quiz_app .results span.good {
+  color: #009688;
+}
+.quiz_app .results span.perfect {
+  color: #0075ff;
+}
+
+/*# sourceMappingURL=main.css.map */
